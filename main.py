@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
+
 
 dataset = pd.read_csv("csv/personality_dataset.csv")
 
@@ -11,4 +13,5 @@ dataset["Personality"] = (dataset["Personality"] == "Extrovert").astype(int)
 dataset["Drained_after_socializing"] = (dataset["Drained_after_socializing"] == "Yes").astype(int)
 
 
-
+print(len(dataset["Personality"] == "Extrovert"))
+print(len(dataset["Personality"] == "Introvert"))
